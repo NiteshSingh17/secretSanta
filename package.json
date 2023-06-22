@@ -1,0 +1,24 @@
+{
+  "name": "secret-santa-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "install-backend-dep" : "npm install --prefix backend" ,
+    "install-frontend-dep" : "npm install --prefix frontend" ,
+    "installDep" : "concurrently \" npm run install-backend-dep\" \" npm run install-frontend-dep\"",
+    "build-frontend": "npm run build --prefix frontend",
+    "build-backend": "npm run build --prefix backend",
+    "start-frontend" : "npm run start --prefix frontend",
+    "start-backend" : "npm run start --prefix backend",
+    "run-build" : "concurrently \" npm run build-backend\" \" npm run build-frontend\"",
+    "run-start" : "concurrently \" npm run start-backend\" \" npm run start-frontend\"",
+    "start": "concurrently \" npm run run-build && npm run run-start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
