@@ -8,5 +8,5 @@
 #backend
 /backend/node_modules
 /backend/dist
-/backend/public/excel/*
+# /backend/public/excel/*
 /backend/.env
