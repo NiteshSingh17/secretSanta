@@ -5,6 +5,7 @@ Secret Santa Project
 ```
 npm run scratch-start
 ```
+open [http://localhost:3000/](http://localhost:3000/)
 # Other Commands
 # install dependency for Frontend and Backend
 ```
