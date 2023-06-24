@@ -6,6 +6,7 @@ import {
   UploadedFiles,
   Res,
   StreamableFile,
+  BadRequestException,
 } from '@nestjs/common';
 import { AppService } from './app.service';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
@@ -28,7 +29,10 @@ export class AppController {
     ]),
   )
   async secretSanta(@UploadedFiles() files: any){
+    console.log("Sercee22");
     let file = await this.appService.santaFileHandler(files);
+    
+    console.log("file",file);
     return {file};
   }
 }

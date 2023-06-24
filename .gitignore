@@ -3,8 +3,10 @@
 #frontend
 /frontend/node_modules
 /frontend/.next
+/frontend/coverage
 
 #backend
 /backend/node_modules
 /backend/dist
 /backend/public/excel/*
+/backend/.env

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
     "install-backend-dep" : "npm install --prefix backend" ,
     "install-frontend-dep" : "npm install --prefix frontend" ,
     "installDep" : "concurrently \" npm run install-backend-dep\" \" npm run install-frontend-dep\"",
@@ -14,7 +13,11 @@
     "start-backend" : "npm run start --prefix backend",
     "run-build" : "concurrently \" npm run build-backend\" \" npm run build-frontend\"",
     "run-start" : "concurrently \" npm run start-backend\" \" npm run start-frontend\"",
-    "start": "concurrently \" npm run run-build && npm run run-start"
+    "run-test-frontend" : "npm run test --prefix frontend",
+    "run-test-backend" : "npm run test --prefix backend",
+    "test" : "concurrently \" npm run run-test-backend && npm run run-test-frontend",
+    "start": "concurrently \"npm run installDep && npm run test && npm run run-build && npm run run-start",
+    "scratch-start": "npm install && concurrently \"npm run installDep && npm run test && npm run run-build && npm run run-start"
   },
   "author": "",
   "license": "ISC",

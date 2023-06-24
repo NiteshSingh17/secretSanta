@@ -50,17 +50,17 @@ export class SecretSantaService {
   getAllEmployeeSecretChilds(allEmployees : EmplyeesInputDTO[],previousYearData : PreviousEmplyeesInputDTO[]){
     return allEmployees.map( emp => ({
       employee : emp,
-      possibleScretChilds : this.getEmployeeSecretChilds(emp, allEmployees, previousYearData)
+      possibleScretChilds : this.shuffle(this.getEmployeeSecretChilds(emp, allEmployees, previousYearData))
     }) )
   }
 
-  getEmployeeSecretChilds(employeeData : EmplyeesInputDTO, allEmployees : EmplyeesInputDTO[],previousYearData : PreviousEmplyeesInputDTO[]){
-    return this.shuffle(allEmployees.filter( emp => {
+  getEmployeeSecretChilds(employeeData : EmplyeesInputDTO, allEmployees : EmplyeesInputDTO[],previousYearData ?: PreviousEmplyeesInputDTO[]){
+    return allEmployees.filter( emp => {
         return (
             emp.Employee_EmailID !== employeeData.Employee_EmailID &&
-            !previousYearData.find( e => e.Employee_EmailID === employeeData.Employee_EmailID && e.Secret_Child_EmailID === emp.Employee_EmailID )
+            !previousYearData?.find( e => e.Employee_EmailID === employeeData.Employee_EmailID && e.Secret_Child_EmailID === emp.Employee_EmailID )
         )
-    }))
+    })
   }
   
   shuffle(array : Array<any>) {

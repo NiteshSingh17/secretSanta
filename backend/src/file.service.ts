@@ -21,12 +21,6 @@ export class FileService {
     return baseUrl + '/' + fileName;
   }
 
-  s2ab(s) : any {            
-    var buf = new ArrayBuffer(s.length);
-    var view = new Uint8Array(buf);
-    for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;                
-    return buf;
-  }
   ReadCell(file: Express.Multer.File) {
     const wb = XLSX.read(file.buffer);
     const sheet_name_list = wb.SheetNames;
