@@ -17,7 +17,7 @@ export class FileService {
     const fileName = new Date().valueOf() + '.xlsx';
     const filePath = path.join(__dirname,`../public/excel/${fileName}`);
     XLSX.writeFile(workbook, filePath, { type : 'buffer' });
-    const baseUrl = this.configService.get<string>('EXCEL_URL') || 'http://localhost:3002/excel';
+    const baseUrl = this.configService.get<string>('EXCEL_URL') || 'http://localhost:3001/excel';
     return baseUrl + '/' + fileName;
   }
 
