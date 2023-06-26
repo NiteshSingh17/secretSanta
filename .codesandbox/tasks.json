@@ -1,0 +1,86 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "npm install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "install-backend-dep": {
+      "name": "install-backend-dep",
+      "command": "npm run install-backend-dep",
+      "runAtStart": false
+    },
+    "install-frontend-dep": {
+      "name": "install-frontend-dep",
+      "command": "npm run install-frontend-dep",
+      "runAtStart": false
+    },
+    "installDep": {
+      "name": "installDep",
+      "command": "npm run installDep",
+      "runAtStart": false
+    },
+    "build-frontend": {
+      "name": "build-frontend",
+      "command": "npm run build-frontend",
+      "runAtStart": false
+    },
+    "build-backend": {
+      "name": "build-backend",
+      "command": "npm run build-backend",
+      "runAtStart": false
+    },
+    "start-frontend": {
+      "name": "start-frontend",
+      "command": "npm run start-frontend",
+      "runAtStart": false
+    },
+    "start-backend": {
+      "name": "start-backend",
+      "command": "npm run start-backend",
+      "runAtStart": false
+    },
+    "run-build": {
+      "name": "run-build",
+      "command": "npm run run-build",
+      "runAtStart": false
+    },
+    "run-start": {
+      "name": "run-start",
+      "command": "npm run run-start",
+      "runAtStart": false
+    },
+    "run-test-frontend": {
+      "name": "run-test-frontend",
+      "command": "npm run run-test-frontend",
+      "runAtStart": false
+    },
+    "run-test-backend": {
+      "name": "run-test-backend",
+      "command": "npm run run-test-backend",
+      "runAtStart": false
+    },
+    "test": {
+      "name": "test",
+      "command": "npm run test",
+      "runAtStart": false
+    },
+    "start": {
+      "name": "start",
+      "command": "npm run start",
+      "runAtStart": true,
+      "preview": {
+        "port": 3001
+      }
+    },
+    "scratch-start": {
+      "name": "scratch-start",
+      "command": "npm run scratch-start",
+      "runAtStart": false
+    }
+  }
+}
