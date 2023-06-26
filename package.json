@@ -15,9 +15,13 @@
     "run-start" : "concurrently \" npm run start-backend\" \" npm run start-frontend\"",
     "run-test-frontend" : "npm run test --prefix frontend",
     "run-test-backend" : "npm run test --prefix backend",
-    "test" : "concurrently \" npm run run-test-backend && npm run run-test-frontend",
-    "start": "concurrently \"npm run installDep && npm run test && npm run run-build && npm run run-start",
-    "scratch-start": "npm install && concurrently \"npm run installDep && npm run test && npm run run-build && npm run run-start"
+    "test" : "concurrently \" npm run run-test-backend && npm run run-test-frontend\"",
+    "start": "concurrently \"npm run installDep && npm run test && npm run run-build && npm run run-start\"",
+    "scratch-start": "npm install && concurrently \"npm run installDep && npm run test && npm run run-build && npm run run-start\""
+  },
+  "engines" : { 
+    "npm" : ">=8.0.0",
+    "node" : ">=18.15.0"
   },
   "author": "",
   "license": "ISC",
