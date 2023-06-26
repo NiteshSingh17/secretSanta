@@ -2,7 +2,7 @@
 Secret Santa Project
 # Requirements
 ```
-Node >= 18.15.0 
+Node >= 16.17.0
 ```
 # Run Project 
 ```
